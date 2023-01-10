@@ -7,7 +7,7 @@ c - empty list, for product matrix
 functions ->
 split() - function is used to separate the input given by user, by using ',' '''
 
-d=int(input(print"enter dimensions"))
+d=int(input(print("enter dimensions")))
 a=[]
 b=[]
 c=[]
