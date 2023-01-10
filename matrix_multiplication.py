@@ -12,10 +12,10 @@ a=[]
 b=[]
 c=[]
 for i in range(d): #loop to take input 
-    e=[int(i) for i in input().split(",")] #temp variable 'e' for taking input 
+    e=[int(i) for i in input(print("enter number")).split(",")] #temp variable 'e' for taking input 
     a.append([i for i in e]) #here the values of e is appended in the list a
 for i in range(d): #loop to take input
-    f=[int(i) for i in input().split(",")] #temp variable 'f' for taking input
+    f=[int(i) for i in input(print("enter number")).split(",")] #temp variable 'f' for taking input
     b.append([i for i in f]) #here the values of f is appended in the list b
 for i in range(d):
    c.append([]) #row initialization
@@ -25,6 +25,7 @@ for i in range(d): #row loop
     for j in range(d): #column loop
         for k in range(d): #product loop
             c[i][j]=c[i][j]+a[i][k]*b[k][j] #here multiplication is happening between a and b
+print ("product matrix")
 l=""
 for i in range(d): #loop for out put matrix C
     for j in c[i]:
