@@ -11,16 +11,21 @@ d=int(input(print("enter dimensions")))
 a=[]
 b=[]
 c=[]
+print ("enter values in matrix according to dimension for")
 for i in range(d): #loop to take input 
-    e=[int(i) for i in input(print("enter number")).split(",")] #temp variable 'e' for taking input 
+    e=[int(i) for i in input(print("enter values for mat_1")).split(",")] #temp variable 'e' for taking input 
     a.append([i for i in e]) #here the values of e is appended in the list a
 for i in range(d): #loop to take input
-    f=[int(i) for i in input(print("enter number")).split(",")] #temp variable 'f' for taking input
+    f=[int(i) for i in input(print("enter values for mat_2")).split(",")] #temp variable 'f' for taking input
     b.append([i for i in f]) #here the values of f is appended in the list b
 for i in range(d):
    c.append([]) #row initialization
    for j in range(d):
        c[i].append(0) #column initialization along with, zero is being appended in every column
+print ("the 1st matrix is ")
+print (a)
+print ("the 2nd matrix is ")
+print (b)
 for i in range(d): #row loop
     for j in range(d): #column loop
         for k in range(d): #product loop
