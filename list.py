@@ -9,6 +9,6 @@ for i in nums:
         max_num = i
         
 print("the max number is",+max_num)
-#sorting the list that is given by the user
+#sorting the list that is given by the user in reverse order / descending order 
 print(sorted(nums, reverse=True))
 
