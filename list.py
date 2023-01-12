@@ -10,5 +10,5 @@ for i in nums:
         
 print("the max number is",+max_num)
 #sorting the list that is given by the user
-nums.sort()
-print (nums)
+print(sorted(nums, reverse=True))
+
