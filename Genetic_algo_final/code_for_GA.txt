@@ -1,0 +1,147 @@
+import math
+import random
+
+node = 10
+noc = 5 # noc = number of chromosomes
+maxgen = 5
+pc = 0.4
+pm = 0.3 
+#________________________part_1____________________________
+
+import random
+
+node = 10
+noc = 100
+
+COST = [[1000,25,28,32,20,6,35,37,40,30],
+        [37,1000,20,28,35,40,30,42,28,4],
+        [42,28,1000,30,25,35,9,32,40,30],
+        [28,30,7,1000,20,25,30,35,22,37],
+        [37,22,35,30,1000,20,25,30,9,28],
+        [25,30,25,8,28,1000,32,40,32,30],
+        [28,25,30,22,37,40,1000,10,32,20],
+        [20,5,32,40,35,25,40,1000,22,37],
+        [30,40,35,25,20,22,37,32,1000,28],
+        [28,30,28,20,11,32,37,40,30,1000]]
+
+cumuprob = [0] * 50
+prob = [0] * 50
+nparr = [0] * 100
+TOU = [[0] * 10 for _ in range(10)]
+
+class Chrom:
+    def __init__(self):
+        self.pt = [0] * node
+        self.fitness = 0.0
+
+ch = [Chrom() for _ in range(noc)]
+popu = [Chrom() for _ in range(100)]
+npopu = [Chrom() for _ in range(100)]
+fpopu = [Chrom() for _ in range(100)]
+
+def calfitness(pv):
+    # Code to calculate fitness goes here
+    pass
+
+def selection(pv):
+    # Code for selection goes here
+    pass
+
+def crossover(pv):
+    # Code for crossover goes here
+    pass
+
+def cross(p0, p1, pv):
+    # Code for cross function goes here
+    pass
+
+def mutation(pv):
+    # Code for mutation goes here
+    pass
+
+def mutate(p, pv):
+    # Code for mutate function goes here
+    pass
+#________________________________part_2_______________________________
+
+import random
+
+def check(pv):
+    # Function definition not provided
+    pass
+
+def main():
+    node = 20
+    noc = 1000
+    TOU = [[0 for x in range(node)] for y in range(node)]
+    COST = [[0 for x in range(node)] for y in range(node)]
+    ch = [{"pt": [0 for x in range(node)]} for y in range(noc)]
+    popu = [{"pt": [0 for x in range(node)]} for y in range(noc)]
+
+    seed = int(input("Please enter seed: "))
+    random.seed(seed)
+
+    for i in range(node):
+        for j in range(node):
+            TOU[i][j] = 1 / COST[i][j]
+
+    for i in range(noc):
+        t2 = 0
+        path = [0 for x in range(20)]
+        path[t2] = 1
+        t2 += 1
+
+        while t2 != node:
+            r = random.randint(0, node - 1)
+            flag = 1
+            for j1 in range(t2):
+                if r == path[j1]:
+                    flag = 0
+
+            if flag == 1:
+                path[t2] = r
+                t2 += 1
+
+        for z in range(node):
+            ch[i]["pt"][z] = path[z]
+
+        for x in range(i):
+            count = 0
+            for y in range(node):
+                if path[y] == ch[x]["pt"][y]:
+                    count += 1
+
+            if count == node:
+                continue
+
+        for z in range(node):
+            popu[pv]["pt"][z] = path[z]
+
+        pv += 1
+
+    print("size of popu:", pv)
+
+if __name__ == '__main__':
+    main()
+#_________________________________part_3________________________________________________
+y2 = [10000]
+for i in range(1, maxgen+1):
+    calfitness(pv)
+    selection(pv)
+    crossover(pv)
+    mutation(pv)
+    y1 = check(pv)
+    if y2[0] > y1:
+        y2[0] = y1
+        p = i
+        z1 = fpopu[0].pt[:]
+
+print("Optimum Result Found At Generation:", p)
+print("Optimum Value:", y2[0])
+print("Final path:")
+print(*z1)
+
+
+#Note: I've made some changes to the code based on the Python syntax and conventions. For example, I've replaced getch() with a simple print statement. You may need to further modify the #code to fit your specific requirements and make sure that the calfitness, selection, crossover, mutation, and check functions are implemented in Python.
+
+#__________________________________part_4_________________________________________________
