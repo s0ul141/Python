@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# matrix addition, substraction and multiplication of nXn matrix element by element
-
-# In[11]:
+'''Write a Python Program which accepts row and column dimensions from users
+and then accepts two lists of numbers (of the same size) that can fit into these
+rows and columns and then convert these lists of numbers to arrays and then
+add, subtract, multiply element-wise'''
 
 
 row=int(input("enter the number of rows :"))
